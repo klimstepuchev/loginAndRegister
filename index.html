@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register Project</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <p>Лого</p>
+        </div>
+
+        <nav>
+            <a href="#">Главная</a>
+            <a href="#">О нас</a>
+            <a href="#">Услуги</a>
+            <a href="#">Контакты</a>
+            <button class="header-btn">Войти</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="close-icon">
+            <span>
+                <ion-icon name="close"></ion-icon>
+            </span>
+        </div>
+        <div class="form-box login">
+            <h2>Войти</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="email">
+                    <label>Электронная почта</label>
+                </div>
+                <div class="input-box">
+                    <input type="password">
+                    <label>Пароль</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">  Запомнить меня</label>
+                    <a href="#">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn">Войти</button>
+                <div class="login-register">
+                    <p>У вас нет аккаунта?
+                        <a href="#" class="register-link">Зарегистрироваться</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Регистрация</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text">
+                    <label>Имя пользователя</label>
+                </div>
+                <div class="input-box">
+                    <input type="email">
+                    <label>Электронная почта</label>
+                </div>
+                <div class="input-box">
+                    <input type="password">
+                    <label>Пароль</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">  Запомнить меня</label>
+                </div>
+                <button type="submit" class="btn">Зарегистрироваться</button>
+                <div class="login-register">
+                    <p>У вас уже есть аккаунт?
+                        <a href="#" class="login-link">Войти</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

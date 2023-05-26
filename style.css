@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(360deg, #000000 15%, rgba(0, 0, 0, 0) 90%), url(/background.jpg);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #181818;
+    padding: 15px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+header nav a:hover::after {
+    transform: scaleX(1);
+}
+
+nav {
+    display: flex;
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-btn {
+    color: #181818;
+    font-size: 20px;
+    font-weight: 600;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: .5s;
+}
+
+.header-btn:hover {
+    background: #fff;
+    color: #181818;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
+    transition: transform .2s ease;
+    transform: scale(0);
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 500px;
+}
+
+.wrapper.active .login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper.active .register {
+    transition: trasnform .18s ease;
+    transform: translateX(0);
+}
+
+.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    top: 1px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.remember-forgot {
+    font-weight: 500;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-register {
+    text-align: center;
+}
+
+.login-register a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+.close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 100;
+}
